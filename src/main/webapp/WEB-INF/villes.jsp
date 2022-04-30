@@ -20,11 +20,11 @@
 						<c:forEach items="${ villesPagination }" var="ville" varStatus="status">
 							<tr>
 								<form method="post" action="ModifVille">
-									<td><input type="hidden" value="${ ville.nom_commune }" name="nomVille" id="nomVille"><c:out value="${ ville.nom_commune }"/></input></td>
-									<td><input type="hidden" value="${ ville.code_postal }" name="codePostal" id="codePostal"><c:out value="${ ville.code_postal }"/></input></td>
-									<td><input type="hidden" value="${ ville.code_commune_INSEE }" name="codeInsee" id="codeInsee"><c:out value="${ ville.code_commune_INSEE }"/></input></td>
-									<td><input type="hidden" value="${ ville.libelle_acheminement }" name="libelle" id="libelle"><c:out value="${ ville.libelle_acheminement }"/></input></td>
-									<td><input type="hidden" value="${ ville.ligne_5 }" name="ligne5" id="ligne5"><c:out value="${ ville.ligne_5 }"/></input></td>
+									<td><input type="hidden" value="${ ville.nomCommune }" name="nomVille" id="nomVille"><c:out value="${ ville.nomCommune }"/></input></td>
+									<td><input type="hidden" value="${ ville.codePostal }" name="codePostal" id="codePostal"><c:out value="${ ville.codePostal }"/></input></td>
+									<td><input type="hidden" value="${ ville.codeCommuneInsee }" name="codeInsee" id="codeInsee"><c:out value="${ ville.codeCommuneInsee }"/></input></td>
+									<td><input type="hidden" value="${ ville.libelleAcheminement }" name="libelle" id="libelle"><c:out value="${ ville.libelleAcheminement }"/></input></td>
+									<td><input type="hidden" value="${ ville.ligne5 }" name="ligne5" id="ligne5"><c:out value="${ ville.ligne5 }"/></input></td>
 									<td><input type="hidden" value="${ ville.latitude }" name="latitude" id="latitude"><c:out value="${ ville.latitude }"/></input></td>
 									<td><input type="hidden" value="${ ville.longitude }" name="longitude" id="longitude"><c:out value="${ ville.longitude }"/></input></td>
 									<td><input type="submit" value="Modifier" name="modifier" id="modifier"></td>
@@ -64,11 +64,11 @@
 						<c:forEach items="${ villesPagination }" var="ville" varStatus="status">
 							<tr>
 								<form method="post" action="ModifVille">
-									<td><input type="hidden" value="${ ville.nom_commune }" name="nomVille" id="nomVille"><c:out value="${ ville.nom_commune }"/></input></td>
-									<td><input type="hidden" value="${ ville.code_postal }" name="codePostal" id="codePostal"><c:out value="${ ville.code_postal }"/></input></td>
-									<td><input type="hidden" value="${ ville.code_commune_INSEE }" name="codeInsee" id="codeInsee"><c:out value="${ ville.code_commune_INSEE }"/></input></td>
-									<td><input type="hidden" value="${ ville.libelle_acheminement }" name="libelle" id="libelle"><c:out value="${ ville.libelle_acheminement }"/></input></td>
-									<td><input type="hidden" value="${ ville.ligne_5 }" name="ligne5" id="ligne5"><c:out value="${ ville.ligne_5 }"/></input></td>
+									<td><input type="hidden" value="${ ville.nomCommune }" name="nomVille" id="nomVille"><c:out value="${ ville.nomCommune }"/></input></td>
+									<td><input type="hidden" value="${ ville.codePostal }" name="codePostal" id="codePostal"><c:out value="${ ville.codePostal }"/></input></td>
+									<td><input type="hidden" value="${ ville.codeCommuneInsee }" name="codeInsee" id="codeInsee"><c:out value="${ ville.codeCommuneInsee }"/></input></td>
+									<td><input type="hidden" value="${ ville.libelleAcheminement }" name="libelle" id="libelle"><c:out value="${ ville.libelleAcheminement }"/></input></td>
+									<td><input type="hidden" value="${ ville.ligne5 }" name="ligne5" id="ligne5"><c:out value="${ ville.ligne5 }"/></input></td>
 									<td><input type="hidden" value="${ ville.latitude }" name="latitude" id="latitude"><c:out value="${ ville.latitude }"/></input></td>
 									<td><input type="hidden" value="${ ville.longitude }" name="longitude" id="longitude"><c:out value="${ ville.longitude }"/></input></td>
 									<td><input type="submit" value="Modifier" name="modifier" id="modifier"></td>

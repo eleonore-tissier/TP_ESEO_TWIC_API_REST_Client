@@ -11,7 +11,7 @@
 						<label for="ville1">Ville 1 :</label>
 						<select id="ville1" name="ville1">
 							<c:forEach items="${ villes }" var="ville" >
-								<option value="${ ville.nom_commune }"><c:out value="${ ville.nom_commune }"/></option>
+								<option value="${ ville.nomCommune }"><c:out value="${ ville.nomCommune }"/></option>
 							</c:forEach>
 						</select>
 					</p>
@@ -19,7 +19,7 @@
 						<label for="ville2">Ville 2 :</label>
 						<select id="ville2" name="ville2">
 							<c:forEach items="${ villes }" var="ville" >
-								<option value="${ ville.nom_commune }"><c:out value="${ ville.nom_commune }"/></option>
+								<option value="${ ville.nomCommune }"><c:out value="${ ville.nomCommune }"/></option>
 							</c:forEach>
 						</select>
 					</p>

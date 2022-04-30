@@ -26,6 +26,9 @@ public class CalculDistance extends HttpServlet {
 	private List<Ville> villes;
 	HttpSession session = null;
 	
+	private static final String VILLE1 = "ville1";
+	private static final String VILLE2 = "ville2";
+	
 	double ville1Long;
 	double ville2Long;
 	double ville1Lat;
@@ -48,8 +51,6 @@ public class CalculDistance extends HttpServlet {
 	    
 		HttpEntity httpEntity = ret.getEntity();
 	    String apiOutput = EntityUtils.toString(httpEntity);
-	    ObjectMapper objectMapper = new ObjectMapper();
-//	    this.villes = objectMapper.readValue(apiOutput, new TypeReference<List<Ville>>() {});
 	    this.villes = new Gson().fromJson(apiOutput, new TypeToken<List<Ville>>() {}.getType());
 	    
   	    this.session.setAttribute("villes", this.villes);
@@ -62,20 +63,20 @@ public class CalculDistance extends HttpServlet {
 			this.session = request.getSession();
 		}		
 		
-		if(request.getParameter("ville1")!=null || request.getParameter("ville2")!=null) {
+		if(request.getParameter(VILLE1)!=null || request.getParameter(VILLE2)!=null) {
 			// On récupère les noms des villes sélectionées dans le formulaire
-			String ville1 = request.getParameter("ville1");
-        	String ville2 = request.getParameter("ville2");
-			request.setAttribute("ville1", ville1);
-			request.setAttribute("ville2", ville2);
+			String ville1 = request.getParameter(VILLE1);
+        	String ville2 = request.getParameter(VILLE2);
+			request.setAttribute(VILLE1, ville1);
+			request.setAttribute(VILLE2, ville2);
 			
 			// On récupère la latitude et la longitude des deux villes
 			for(Ville item : this.villes) {
-				if(item.getNom_commune().equals(ville1)) {
+				if(item.getNomCommune().equals(ville1)) {
 					this.ville1Lat = Double.parseDouble(item.getLatitude());
 					this.ville1Long = Double.parseDouble(item.getLongitude());
 				}
-				if(item.getNom_commune().equals(ville2)) {
+				if(item.getNomCommune().equals(ville2)) {
 					this.ville2Lat = Double.parseDouble(item.getLatitude());
 					this.ville2Long = Double.parseDouble(item.getLongitude());
 				}
