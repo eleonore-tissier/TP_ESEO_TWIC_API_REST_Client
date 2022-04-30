@@ -3,18 +3,15 @@ package com.servlets;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import com.beans.Ville;
-import com.dao.DaoFactory;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -118,9 +115,6 @@ public class ModifVille extends HttpServlet {
 	        
 			// On exécute la requête
 			HttpResponse ret = httpClient.execute(putRequest);
-			
-			HttpEntity httpEntity = ret.getEntity();
-		    String apiOutput = EntityUtils.toString(httpEntity);
 			
 			Boolean modifDonne = true;
 			request.setAttribute("modifDonne", modifDonne);

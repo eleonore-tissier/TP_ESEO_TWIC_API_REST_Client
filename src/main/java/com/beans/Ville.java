@@ -29,40 +29,40 @@ public class Ville {
 		return this.codeCommuneInsee;
 	}
 
-	public void setCodeCommuneInsee(String code_commune_INSEE) {
-		this.codeCommuneInsee = code_commune_INSEE;
+	public void setCodeCommuneInsee(String codeCommuneInsee) {
+		this.codeCommuneInsee = codeCommuneInsee;
 	}
 
 	public String getNomCommune() {
 		return this.nomCommune;
 	}
 
-	public void setNomCommune(String nom_commune) {
-		this.nomCommune = nom_commune;
+	public void setNomCommune(String nomCommune) {
+		this.nomCommune = nomCommune;
 	}
 
 	public String getCodePostal() {
 		return this.codePostal;
 	}
 
-	public void setCodePostal(String code_postal) {
-		this.codePostal = code_postal;
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
 	}
 
 	public String getLibelleAcheminement() {
 		return this.libelleAcheminement;
 	}
 
-	public void setLibelleAcheminement(String libelle_acheminement) {
-		this.libelleAcheminement = libelle_acheminement;
+	public void setLibelleAcheminement(String libelleAcheminement) {
+		this.libelleAcheminement = libelleAcheminement;
 	}
 
 	public String getLigne5() {
 		return this.ligne5;
 	}
 
-	public void setLigne5(String ligne_5) {
-		this.ligne5 = ligne_5;
+	public void setLigne5(String ligne5) {
+		this.ligne5 = ligne5;
 	}
 
 	public String getLatitude() {
