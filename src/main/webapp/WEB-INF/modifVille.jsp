@@ -22,11 +22,11 @@
 		    	</p>
 		    	<p class="champsModifier">
 		    		<label for="libelle">Nouveau libellé d'acheminement :</label>
-		    		<input type="text" name="libelle" id="libelle" pattern="[A-Za-z]+||{0}">
+		    		<input type="text" name="libelle" id="libelle">
 		    	</p>
 		    	<p class="champsModifier">
 		    		<label for="nomVille">Ligne 5 :</label>
-		    		<input type="text" name="nomVille" id="nomVille" pattern="[A-Za-z]+||{0}">
+		    		<input type="text" name="ligne5" id="ligne5">
 		    	</p>
 		    	<p class="champsModifier">	
 		    		<label for="latitude">Nouvelle latitude :</label>

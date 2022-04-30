@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 
 import com.beans.Ville;
 
@@ -63,7 +61,7 @@ public class ModifVille extends HttpServlet {
 		}
 		
 		// Body de la requête PUT de modification de la ville
-		if(request.getParameter("enregistrer") != null && request.getParameter("supprimer") == null) {
+		if(request.getParameter("enregistrer") != null) {
 			List<String> parameters = new ArrayList<>();
 			if(request.getParameter(NOMVILLE) != null && !request.getParameter(NOMVILLE).equals("")) {
 				parameters.add("Nom_commune");
@@ -101,7 +99,7 @@ public class ModifVille extends HttpServlet {
 					putRequestBody += "\"" + parameters.get(i-1) + "\": \"" + parameters.get(i) + "\",";
 				}
 			}
-			
+
 			// Envoie de la requête au serveur
 			// Préparation de la requête put
 			DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -114,7 +112,7 @@ public class ModifVille extends HttpServlet {
 			putRequest.setEntity(stringEntity);
 	        
 			// On exécute la requête
-			HttpResponse ret = httpClient.execute(putRequest);
+			httpClient.execute(putRequest);
 			
 			Boolean modifDonne = true;
 			request.setAttribute("modifDonne", modifDonne);
