@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+
+	<welcome-file-list>
+		<welcome-file>Accueil</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlet de calcul des distances -->
+	<servlet>
+		<description></description>
+		<display-name>CalculDistance</display-name>
+		<servlet-name>CalculDistance</servlet-name>
+		<servlet-class>com.servlets.CalculDistance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CalculDistance</servlet-name>
+		<url-pattern>/CalculDistance</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlet d'affichage des villes -->
+	<servlet>
+		<description></description>
+		<display-name>Villes</display-name>
+		<servlet-name>Villes</servlet-name>
+		<servlet-class>com.servlets.Villes</servlet-class>
+	</servlet>
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Villes</servlet-name> -->
+<!-- 		<url-pattern>/Villes</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+	<!-- Servlet d'accueil -->
+	<servlet>
+		<description></description>
+		<display-name>Accueil</display-name>
+		<servlet-name>Accueil</servlet-name>
+		<servlet-class>com.servlets.Accueil</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Accueil</servlet-name>
+		<url-pattern>/Accueil</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Servlet de modification d'une ville -->
+	<servlet>
+		<description></description>
+		<display-name>ModifVille</display-name>
+		<servlet-name>ModifVille</servlet-name>
+		<servlet-class>com.servlets.ModifVille</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifVille</servlet-name>
+		<url-pattern>/ModifVille</url-pattern>
+	</servlet-mapping>
+
+	<!-- Configuration prélude -->
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/header.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
